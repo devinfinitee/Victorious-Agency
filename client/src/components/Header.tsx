@@ -4,7 +4,7 @@ import { Moon, Sun, Menu, X, DollarSign } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { useCurrency } from "./CurrencyProvider";
 import { useState } from "react";
-import logo from "@assets/image_1762906246130.png";
+import logo from "../components/../../../assets/image_1762906246130.png";
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();

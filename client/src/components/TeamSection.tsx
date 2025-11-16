@@ -1,6 +1,6 @@
 import { TeamMember } from "./TeamMember";
-import teamMember1 from "@assets/generated_images/Team_member_portrait_male_189084a7.png";
-import teamMember2 from "@assets/generated_images/Team_member_portrait_female_5420649e.png";
+import teamMember1 from "../components/../../../assets/generated_images/Team_member_portrait_male_189084a7.png";
+import teamMember2 from "../components/../../../assets/generated_images/Team_member_portrait_female_5420649e.png";
 
 export function TeamSection() {
   const team = [
