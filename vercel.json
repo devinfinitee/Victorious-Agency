@@ -1,18 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "client/index.html",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm install && cd client && npm run build"
-      }
-    }
-  ],
+  "installCommand": "npm install",
   "outputDirectory": "client/dist",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/client/dist/index.html" 
+      "destination": "/client/dist/index.html"
     }
   ]
 }
