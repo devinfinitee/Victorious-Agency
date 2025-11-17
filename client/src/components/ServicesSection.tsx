@@ -1,8 +1,9 @@
 import { ServiceCard } from "./ServiceCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import webDevImage from "../components/../../../assets/generated_images/Website_development_service_illustration_eaf8ee36.png";
-import mobileAppImage from "../components/../../../assets/generated_images/Mobile_app_service_illustration_f552d997.png";
-import seoImage from "../components/../../../assets/generated_images/SEO_service_illustration_7717d0b6.png";
+import webDevImage from "@assets/generated_images/Website_development_service_illustration_eaf8ee36.png";
+import mobileAppImage from "@assets/generated_images/Mobile_app_service_illustration_f552d997.png";
+import seoImage from "@assets/generated_images/SEO_service_illustration_7717d0b6.png";
+
 export function ServicesSection() {
   const services = [
     {

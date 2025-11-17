@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "../components/../../../assets/generated_images/Hero_background_workspace_image_0417d6a4.png";
+import heroImage from "@assets/generated_images/Hero_background_workspace_image_0417d6a4.png";
 
 export function Hero() {
   return (

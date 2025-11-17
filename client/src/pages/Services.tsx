@@ -4,9 +4,9 @@ import { Input } from "@/components/ui/input";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Search } from "lucide-react";
 import { useState } from "react";
-import webDevImage from "../../../assets/generated_images/Website_development_service_illustration_eaf8ee36.png";
-import mobileAppImage from "../../../assets/generated_images/Mobile_app_service_illustration_f552d997.png";
-import seoImage from "../../../assets/generated_images/SEO_service_illustration_7717d0b6.png";
+import webDevImage from "@assets/generated_images/Website_development_service_illustration_eaf8ee36.png";
+import mobileAppImage from "@assets/generated_images/Mobile_app_service_illustration_f552d997.png";
+import seoImage from "@assets/generated_images/SEO_service_illustration_7717d0b6.png";
 
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState("");

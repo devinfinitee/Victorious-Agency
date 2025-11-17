@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  
   "scripts": {
     "predev": "node scripts/ensure-install.cjs",
     "dev": "vite",
