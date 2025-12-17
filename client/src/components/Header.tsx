@@ -22,15 +22,15 @@ export function Header() {
   const isActive = (href: string) => location === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-slate-950/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" data-testid="link-home">
-            <div className="flex items-center gap-3 hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors">
-              <img src={logo} alt="VDE Logo" className="h-10 w-10" />
+            <div className="flex items-center gap-3 px-2 py-1 rounded-lg transition-all duration-300 hover:bg-white/5 group">
+              <img src={logo} alt="VDE Logo" className="h-10 w-10 group-hover:scale-110 transition-transform" />
               <div className="hidden sm:block">
-                <div className="text-sm font-bold">Victorious Digital</div>
-                <div className="text-xs text-muted-foreground">Enterprises</div>
+                <div className="text-sm font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Victorious Digital</div>
+                <div className="text-xs text-slate-400">Enterprises</div>
               </div>
             </div>
           </Link>
@@ -40,7 +40,7 @@ export function Header() {
               <Link key={link.href} href={link.href} data-testid={`link-${link.label.toLowerCase()}`}>
                 <Button
                   variant="ghost"
-                  className={isActive(link.href) ? "bg-muted" : ""}
+                  className={`transition-all duration-300 ${isActive(link.href) ? "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-blue-500/30" : "text-slate-300 hover:text-white hover:bg-white/5"}`}
                   data-testid={`button-nav-${link.label.toLowerCase()}`}
                 >
                   {link.label}
@@ -55,7 +55,7 @@ export function Header() {
               size="icon"
               onClick={toggleCurrency}
               data-testid="button-currency-toggle"
-              className="hover-elevate active-elevate-2"
+              className="text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-300"
               title={`Switch to ${currency === "USD" ? "NGN" : "USD"}`}
             >
               <div className="flex items-center gap-1">
@@ -69,7 +69,7 @@ export function Header() {
               size="icon"
               onClick={toggleTheme}
               data-testid="button-theme-toggle"
-              className="hover-elevate active-elevate-2"
+              className="text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-300"
             >
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
@@ -80,13 +80,13 @@ export function Header() {
 
             <div className="hidden md:flex items-center gap-2">
               <Link href="/login" data-testid="link-login">
-                <Button variant="ghost" data-testid="button-login">
+                <Button variant="ghost" className="text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-300" data-testid="button-login">
                   Login
                 </Button>
               </Link>
               <Link href="/register" data-testid="link-register">
                 <Button
-                  className="bg-gold hover:bg-gold/90 text-gold-foreground"
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
                   data-testid="button-register"
                 >
                   Register
@@ -97,7 +97,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden text-slate-300 hover:text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
@@ -107,12 +107,12 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t py-4 space-y-2">
+          <div className="md:hidden border-t border-white/10 py-4 space-y-2 bg-slate-900/50 backdrop-blur">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <Button
                   variant="ghost"
-                  className={`w-full justify-start ${isActive(link.href) ? "bg-muted" : ""}`}
+                  className={`w-full justify-start transition-all ${isActive(link.href) ? "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white" : "text-slate-300 hover:text-white"}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -121,13 +121,13 @@ export function Header() {
             ))}
             <div className="flex flex-col gap-2 pt-2">
               <Link href="/login">
-                <Button variant="ghost" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>
                   Login
                 </Button>
               </Link>
               <Link href="/register">
                 <Button
-                  className="w-full bg-gold hover:bg-gold/90 text-gold-foreground"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Register
